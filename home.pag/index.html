@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarleyCross</title>
+    <style>
+        body {
+            font-size: 16px;
+        }
+
+        .menu {
+            flex-direction: column;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .menu {
+            flex-direction: column;
+
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .cabecalho2 {
+            background-color: white;
+            width: 100%;
+            padding: 3.5em;
+            box-sizing: border-box;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .cabecalho {
+            background-color: rgb(29, 28, 28);
+            width: 100%;
+            padding: 3.7em;
+            box-sizing: border-box;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .banner {
+            width: 100%;
+            height: 140vh;
+            background-image: url(/home.pag/img/banner22.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            margin-top: -1%;
+            display: flex;
+            max-width: 100%;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: -1400px;
+            left: 0.2px;
+            right: 15%;
+            bottom: 0px;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        .banner-texto {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            height: 70px;
+            transform: translateY(-50%);
+            color: #fff;
+            z-index: 2;
+            max-width: 60vh;
+        }
+
+        .banner-texto h1 {
+            position: relative;
+            top: 12px;
+            font-size: 9.9rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner-texto p {
+            font-size: 5.2rem;
+            margin: 15px 0 25px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .banner-texto .destaque {
+            color: #ff6600;
+        }
+
+        .banner-btn {
+            background: #ff6600;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 12px 30px;
+            border: none;
+            font-size: 4.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .banner-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .logo {
+            width: 200px;
+            z-index: 1000px;
+            position: relative;
+            top: 20px;
+            padding: 65px 0;
+            box-sizing: border-box;
+            position: absolute;
+            top: -50px;
+            left: 98vh;
+            z-index: 1000;
+
+        }
+
+        .modelos {
+            position: relative;
+            top: 1em;
+            right: -16rem;
+            height: auto;
+            display: inline;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            margin: 200px;
+            font-size: 4.0rem;
+            text-shadow: 4px 4px 16px rgb(58, 56, 56);
+            font-weight: bold;
+            letter-spacing: 10px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+
+        }
+
+        .modelos:hover {
+            background-color: #ff6600;
+            color: white;
+            border-radius: 0.4rem;
+
+        }
+
+        .login {
+            position: relative;
+            top: -30px;
+            left: 151vh;
+            color: #000;
+            z-index: 2000;
+            padding: 10px 20px;
+            font-size: 4.5rem;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login:hover {
+            color: #ff6600;
+        }
+
+        .singup {
+            position: relative;
+            top: -35px;
+            left: 153vh;
+            color: #000;
+            z-index: 2000;
+            padding: 10px 20px;
+            font-size: 4.5rem;
+            letter-spacing: 3px;
+            font-weight: bold;
+            background: black;
+            color: #fff;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .singup:hover {
+            background-color: #ff6600;
+            color: #fff;
+        }
+
+        .search {
+            display: inline;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            color: gray;
+            position: relative;
+            top: -38px;
+            left: 148vh;
+            z-index: 2000;
+            font-size: 3rem;
+            border-radius: 50px;
+            padding: 8px;
+            grid: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="cabecalho"></div>
+            <div class="cabecalho2"></div>
+            <img class="logo" src="/home.pag/imgs/logof.png" alt="logo">
+            <input class="search" type="search" placeholder=" search...">
+            <a href="/login.pag/index.html"><button class="login">log in</button></a>
+            <a href="/singup.pag/index.html"><button class="singup">sing up</button></a>
+        </header>
+
+        <div class="banner">
+            <div class="banner-overlay">
+                <div class="banner-texto">
+
+                    <h1>Liberdade <span class="destaque">Sobre Duas Rodas</span></h1>
+                    <p>Descubra a potência e o estilo inconfundível das lendárias Harley-Davidson</p>
+                    <a href="/catalogo/index.html"><button class="banner-btn">Explorar Modelos</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modelos">
+            <button class="modelos">cruiser</button>
+            <button class="modelos">Fat Boy 114</button>
+            <button class="modelos">Road King</button>
+            <button class="modelos">LiveWire</button>
+            <button class="modelos"> Nightster</button>
+        </div>
+        <div id="produtos">
+            <h1></h1>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
